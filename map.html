@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="LV">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,10 +13,10 @@
     </style>
 </head>
 <body>
-    <h1>Leaflet Map Example</h1>
     <div id="map"></div>
-    
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.0/dist/leaflet.css" />
+
+    <script src="https://unpkg.com/leaflet@1.9.0/dist/leaflet.js"></script>
     <script>
         // Initialize the map
         var map = L.map('map').setView([56.946285, 24.105078], 13);
@@ -29,7 +29,7 @@
 
         // Add a marker to the map
         var marker = L.marker([56.946285, 24.105078]).addTo(map);
-        marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+        marker.bindPopup("I am a popup.").openPopup();
     </script>
 </body>
 </html>
