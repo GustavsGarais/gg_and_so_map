@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="LV">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leaflet Map</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <title>Latvian GeoJSON Example</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.0/dist/leaflet.css" />
     <style>
         #map {
             height: 500px;
@@ -14,22 +14,30 @@
 </head>
 <body>
     <div id="map"></div>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.0/dist/leaflet.css" />
-
     <script src="https://unpkg.com/leaflet@1.9.0/dist/leaflet.js"></script>
     <script>
-        // Initialize the map
+        // Initialize the map centered on Latvia (use proper lat/lng for better view)
         var map = L.map('map').setView([56.946285, 24.105078], 13);
 
-        // Set up the map tile layer
+        // Set up the OpenStreetMap tile layer
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution: '© OpenStreetMap contributors'
         }).addTo(map);
 
-        // Add a marker to the map
-        var marker = L.marker([56.946285, 24.105078]).addTo(map);
-        marker.bindPopup("I am a popup.").openPopup();
+        // Function to convert LKS92 to WGS84 using the LKS92WGS84 module
+        function convertLKS92ToWGS84(x, y) {
+            var coords = LKS92WGS84.convertXYToLatLon([x, y]);
+            return { lat: coords[0], lng: coords[1] };
+        }
+
+
+        // Add each feature as a marker on the map
+        geojsonFeature.features.forEach(function (feature) {
+            var coords = convertLKS92ToWGS84(feature.geometry.coordinates[0], feature.geometry.coordinates[1]);
+            var marker = L.marker([coords.lat, coords.lng]).addTo(map);
+            marker.bindPopup(feature.properties.PLACENAME);
+        });
     </script>
 </body>
 </html>

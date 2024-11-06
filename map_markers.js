@@ -607,3 +607,4 @@ var LKS92WGS84 = (function()
         { "type": "Feature", "properties": { "PLACENAME": "Atpūtas vieta \"Doles sala\"", "PLACESUBTY": 2, "REG_CODE": "6", "LVM_DISTRI": "22623", "BLOCKKEY": "604-5" }, "geometry": { "type": "Point", "coordinates": [ 512285.651200000196695, 302459.556399998255074 ] } }
         ]
         }
+        export default mapMarkers;
