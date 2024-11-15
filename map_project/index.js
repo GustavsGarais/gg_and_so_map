@@ -1,4 +1,4 @@
-// starts off with the first place to show
+
 var map = L.map('map').setView([56.9467, 24.1203], 13);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
