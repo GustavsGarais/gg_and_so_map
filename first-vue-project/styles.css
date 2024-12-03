@@ -249,3 +249,105 @@ body {
         max-height: none; /* Remove max-height for responsive */
     }
 }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .calculator {
+    background: #1e1e1e; /* Tumšs korpuss */
+    padding: 20px;
+    border-radius: 20px 0 0 0; /* Noapaļotas tikai augšējās un labās malas */
+    box-shadow: -4px -4px 8px rgba(0, 0, 0, 0.4); /* Ēna no labās un augšas */
+    width: 300px; /* Platums, lai kalkulators būtu kompakts */
+    position: fixed;
+    bottom: 0; /* Fiksēts pie apakšējās malas */
+    left: 0; /* Fiksēts pie kreisās malas */
+  }
+  
+  #input-field {
+    width: 100%;
+    height: 70px;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: right;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    background: #000; /* Tumša ekrāna imitācija */
+    color: #0f0; /* Zaļie cipari */
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.6); /* Iekšēja ēna ekrānam */
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  
+  button {
+    height: 60px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #333; /* Tumša pamatne */
+    color: #fff;
+    box-shadow: 0 4px rgba(0, 0, 0, 0.4); /* Pogu reljefa efekts */
+    transition: all 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #555; /* Gaišāka, kad uzbrauc virsū */
+  }
+  
+  button:active {
+    box-shadow: 0 2px rgba(0, 0, 0, 0.6); /* Spiediena efekts */
+    transform: translateY(2px); /* Nedaudz nolaižas */
+  }
+  
+  #history {
+    margin-top: 20px;
+    padding: 10px;
+    background: #1e1e1e; /* Tāds pats kā kalkulatora korpuss */
+    border-radius: 10px;
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.6); /* Iekšējā ēna */
+  }
+  
+  #history h2 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  #history-list {
+    list-style: none;
+    padding: 0;
+    max-height: 150px;
+    overflow-y: auto; /* Ritināma vēstures sadaļa */
+  }
+  
+  #history-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-bottom: 1px solid #444;
+    color: #fff;
+  }
+  
+  #history-list li button {
+    background: none;
+    border: none;
+    color: #f00;
+    cursor: pointer;
+  }
+  
+  #history-list li button:hover {
+    text-decoration: underline;
+  }
+  
