@@ -249,28 +249,27 @@ body {
         max-height: none; /* Remove max-height for responsive */
     }
 }
-
+ /* Calculator*/
+/* styles.css */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #f4f4f4;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .calculator {
-    background: #1e1e1e; /* Tumšs korpuss */
+    text-align: center;
+    margin: 20px;
+}
+
+.calculator {
+    background: #1e1e1e; /* Dark body */
     padding: 20px;
-    border-radius: 20px 0 0 0; /* Noapaļotas tikai augšējās un labās malas */
-    box-shadow: -4px -4px 8px rgba(0, 0, 0, 0.4); /* Ēna no labās un augšas */
-    width: 300px; /* Platums, lai kalkulators būtu kompakts */
+    border-radius: 20px 0 0 0; /* Rounded only top and right edges */
+    box-shadow: -4px -4px 8px rgba(0, 0, 0, 0.4); /* Shadow from right and top */
+    width: 300px; /* Compact width for the calculator */
     position: fixed;
-    bottom: 0; /* Fiksēts pie apakšējās malas */
-    left: 0; /* Fiksēts pie kreisās malas */
-  }
-  
-  #input-field {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centered in the middle of the screen */
+}
+
+#input-field {
     width: 100%;
     height: 70px;
     font-size: 24px;
@@ -279,75 +278,74 @@ body {
     border: none;
     border-radius: 10px;
     padding: 10px;
-    background: #000; /* Tumša ekrāna imitācija */
-    color: #0f0; /* Zaļie cipari */
-    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.6); /* Iekšēja ēna ekrānam */
-  }
-  
-  .buttons {
+    background: #000; /* Dark background for the screen */
+    color: #0f0; /* Green text for the numbers */
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.6); /* Inner shadow for screen effect */
+}
+
+.buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-  }
-  
-  button {
+}
+
+button {
     height: 60px;
     font-size: 18px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    background: #333333; /* Tumša pamatne */
+    background: #333333; /* Dark background */
     color: #fff;
-    box-shadow: 0 4px rgba(0, 0, 0, 0.4); /* Pogu reljefa efekts */
+    box-shadow: 0 4px rgba(0, 0, 0, 0.4); /* Button shadow */
     transition: all 0.2s ease;
-  }
-  
-  button:hover {
-    background-color: #27b34a; /* Gaišāka, kad uzbrauc virsū */
-  }
-  
-  button:active {
-    box-shadow: 0 2px rgba(0, 0, 0, 0.6); /* Spiediena efekts */
-    transform: translateY(2px); /* Nedaudz nolaižas */
-  }
-  
-  #history {
+}
+
+button:hover {
+    background-color: #27b34a; /* Lighter on hover */
+}
+
+button:active {
+    box-shadow: 0 2px rgba(0, 0, 0, 0.6); /* Button press effect */
+    transform: translateY(2px); /* Slightly shifts when pressed */
+}
+
+#history {
     margin-top: 20px;
+    background: #1e1e1e; /* Same background as the calculator */
     padding: 10px;
-    background: #1e1e1e; /* Tāds pats kā kalkulatora korpuss */
     border-radius: 10px;
-    box-shadow: inset 0 4px 6px rgba(17, 209, 97, 0.6); /* Iekšējā ēna */
-  }
-  
-  #history h2 {
+    box-shadow: inset 0 4px 6px rgba(17, 209, 97, 0.6); /* Inner shadow for the history section */
+}
+
+#history h2 {
     color: #fff;
     font-size: 18px;
     margin-bottom: 10px;
-  }
-  
-  #history-list {
+}
+
+#history-list {
     list-style: none;
     padding: 0;
     max-height: 150px;
-    overflow-y: auto; /* Ritināma vēstures sadaļa */
-  }
-  
-  #history-list li {
+    overflow-y: auto; /* Scrollable history */
+}
+
+#history-list li {
     display: flex;
     justify-content: space-between;
     padding: 5px;
     border-bottom: 1px solid #444;
     color: #fff;
-  }
-  
-  #history-list li button {
+}
+
+#history-list li button {
     background: none;
     border: none;
     color: #f00;
     cursor: pointer;
-  }
-  
-  #history-list li button:hover {
+}
+
+#history-list li button:hover {
     text-decoration: underline;
-  }
-  
+}

@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="icon" href="/favicon.ico">
-        <meta name="viewport" Content="width=device-width, initial-scale=1.0">
-            <title>Kalkulators ar Vēsturi</title>
+  <head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function redirectToCalculator() {
+            window.location.href = "calculator.html"; // Redirect to calculator.html
+        }
+    </script>
 </head>
 <body>
+  
   <script src="scrpit.js"></script>
+  <li><a href="homepage.html" ><h3>Homepage</h3></a></li>
+
   
   <div class="calculator">
     <input type="text" id="input-field" readonly>
@@ -30,12 +39,13 @@
       <button onclick="appendValue('+')">+</button>
       <button onclick="clearInput()">AC</button>
     </div>
-    <h2>Vēsture</h2>
+    <h2>Vēsture</h2> <!-- History Section -->
     <div id="history">
-      <button onclick="clearHistory()">Notīrīt vēsturi</button>
-      <ul id="history-list"></ul>
+        <button onclick="clearHistory()">Notīrīt vēsturi</button>
+        <ul id="history-list"></ul> <!-- History list will be shown here -->
     </div>
-  </div>
-  <script src="script.js"></script>
+</div>
+
+<script src="script.js"></script> <!-- Link to your custom script.js -->
 </body>
 </html>
