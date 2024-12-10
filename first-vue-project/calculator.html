@@ -1,51 +1,60 @@
 <!DOCTYPE html>
-<html lang="">
-  <head>
-    
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>Advanced Calculator</title>
     <link rel="stylesheet" href="styles.css">
     <script>
         function redirectToCalculator() {
-            window.location.href = "calculator.html"; // Redirect to calculator.html
+            window.location.href = "calculator.html";
         }
     </script>
 </head>
 <body>
-  
-  <script src="scrpit.js"></script>
-  <li><a href="homepage.html" ><h3>Homepage</h3></a></li>
+    <a href="homepage.html">
+        <button>Go to Calculator</button>
+    </a>
 
-  
-  <div class="calculator">
-    <input type="text" id="input-field" readonly>
-    <div class="buttons">
-      <button onclick="appendValue('7')">7</button>
-      <button onclick="appendValue('8')">8</button>
-      <button onclick="appendValue('9')">9</button>
-      <button onclick="appendValue('/')">/</button>
-      <button onclick="appendValue('4')">4</button>
-      <button onclick="appendValue('5')">5</button>
-      <button onclick="appendValue('6')">6</button>
-      <button onclick="appendValue('*')">*</button>
-      <button onclick="appendValue('1')">1</button>
-      <button onclick="appendValue('2')">2</button>
-      <button onclick="appendValue('3')">3</button>
-      <button onclick="appendValue('-')">-</button>
-      <button onclick="appendValue('0')">0</button>
-      <button onclick="appendValue('.')">.</button>
-      <button onclick="calculate()">=</button>
-      <button onclick="appendValue('+')">+</button>
-      <button onclick="clearInput()">AC</button>
-    </div>
-    <h2>Vēsture</h2> <!-- History Section -->
-    <div id="history">
-        <button onclick="clearHistory()">Notīrīt vēsturi</button>
-        <ul id="history-list"></ul> <!-- History list will be shown here -->
-    </div>
-</div>
+    <div class="calculator">
+        <input type="text" id="input-field" readonly>
+        <div class="buttons">
+            <button onclick="appendValue('7')">7</button>
+            <button onclick="appendValue('8')">8</button>
+            <button onclick="appendValue('9')">9</button>
+            <button onclick="appendValue('/')">/</button>
+            <button onclick="appendValue('4')">4</button>
+            <button onclick="appendValue('5')">5</button>
+            <button onclick="appendValue('6')">6</button>
+            <button onclick="appendValue('*')">*</button>
+            <button onclick="appendValue('1')">1</button>
+            <button onclick="appendValue('2')">2</button>
+            <button onclick="appendValue('3')">3</button>
+            <button onclick="appendValue('-')">-</button>
+            <button onclick="appendValue('0')">0</button>
+            <button onclick="appendValue('.')">.</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="appendValue('+')">+</button>
+            <button onclick="clearInput()">AC</button>
+        </div>
 
-<script src="script.js"></script> <!-- Link to your custom script.js -->
+        <h2>Advanced Functions</h2>
+        <div class="advanced-buttons">
+            <button onclick="calculateFunction('cos')">cos</button>
+            <button onclick="calculateFunction('sin')">sin</button>
+            <button onclick="calculateFunction('tan')">tan</button>
+            <button onclick="calculateFunction('sqrt')">√</button>
+            <button onclick="calculateFunction('log')">log</button>
+            <button onclick="calculateFunction('exp')">exp</button>
+        </div>
+
+        <h2>History</h2>
+        <div id="history">
+            <button onclick="clearHistory()">Clear History</button>
+            <ul id="history-list"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
