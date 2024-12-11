@@ -13,12 +13,16 @@
 </head>
 <body>
     <a href="homepage.html">
-        <button>Go to Calculator</button>
+        <button>Go homepage</button>
     </a>
 
     <div class="calculator">
         <input type="text" id="input-field" readonly>
         <div class="buttons">
+            <button onclick="appendValue('[')">[</button>
+            <button onclick="appendValue(']')">]</button>
+            <button onclick="clearInput()">AC</button>
+            <button onclick="calculate()">=</button>
             <button onclick="appendValue('7')">7</button>
             <button onclick="appendValue('8')">8</button>
             <button onclick="appendValue('9')">9</button>
@@ -31,15 +35,11 @@
             <button onclick="appendValue('2')">2</button>
             <button onclick="appendValue('3')">3</button>
             <button onclick="appendValue('-')">-</button>
+            <button onclick="appendValue('sqr')">sqr</button>
             <button onclick="appendValue('0')">0</button>
             <button onclick="appendValue('.')">.</button>
-            <button onclick="calculate()">=</button>
+            
             <button onclick="appendValue('+')">+</button>
-            <button onclick="clearInput()">AC</button>
-        </div>
-
-        <h2>Advanced Functions</h2>
-        <div class="advanced-buttons">
             <button onclick="calculateFunction('cos')">cos</button>
             <button onclick="calculateFunction('sin')">sin</button>
             <button onclick="calculateFunction('tan')">tan</button>
@@ -47,6 +47,7 @@
             <button onclick="calculateFunction('log')">log</button>
             <button onclick="calculateFunction('exp')">exp</button>
         </div>
+
 
         <h2>History</h2>
         <div id="history">

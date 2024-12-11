@@ -61,6 +61,8 @@ function calculateFunction(func) {
       case "exp":
         result = Math.exp(value);
         break;
+      case "sqr":
+        result = Math.sqr(value)
       default:
         throw new Error("Unknown function");
     }
