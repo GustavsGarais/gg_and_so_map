@@ -58,11 +58,6 @@ function calculateFunction(func) {
       case "log":
         result = Math.log(value);
         break;
-      case "exp":
-        result = Math.exp(value);
-        break;
-      case "sqr":
-        result = Math.sqr(value)
       default:
         throw new Error("Unknown function");
     }
